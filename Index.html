@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE WONDER</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        
+        <section class="home" id="home">
+            <div class="home-info">
+                <div class="home-img">
+                    <img src="./Img/Photo-Orlin-Samuel-Perez.png" />
+                    <h1>Orlin Samuel Perez</h1>
+                </div>
+                <div class="home-info-p">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima dolorem temporibus nesciunt fuga itaque dicta perspiciatis exercitationem repellat assumenda laudantium magni voluptate eos amet laboriosam eum, consectetur aliquid ipsam.
+                    </p>
+                </div>
+                <div class="home-contact">
+                    <ul>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/orlin-samuel-p%C3%A9rez-arias-8a3ba8211/">Linkedin</a></li>
+                        <li><a target="_blank" href="https://twitter.com/OrlinSamuelPre1?s=09">Twiter</a></li>
+                        <li><a target="_blank" href="https://github.com/OrlinSamuelPerez">Git-Hub</a></li>
+                        <li><a href="#" onclick="modalFunction()" >Email</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+           
+        </section>
+        
+        <section class="Porfolio"  >
+            <div class="grid-porfolio" id="Porfolio"></div>
+            <!-- Inyect with Javascript-->
+        </section>
+      
+    </main>
+    <aside class="main-aside">
+       <div id="h-aside"></div>
+       <div id="img-aside"></div>
+       <div id="p-aside"></div>
+    </aside>
+    
+    <div class="modal" id="modal">
+        <div class="modal-info">
+            <form>
+                <div>
+                    <h1>Hablemos</h1>
+                    <input id="name" placeholder="Escribe tu nombre *"/>
+                </div>
+                <div>
+                    <input type="email" id="email" placeholder="Escribe tu correo"/>
+                </div>
+                <div class="form-div">
+                    <button onclick="modalFunction()" >Cancelar</button>
+                    <button id="submit-form" onclick="submitForm()" type="submit" >Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDjvB36BoyCDRoVMVtzns1krLN9kGvlRZs",
+            authDomain: "porfolio-80df0.firebaseapp.com",
+            projectId: "porfolio-80df0",
+            storageBucket: "porfolio-80df0.appspot.com",
+            messagingSenderId: "374842708619",
+            appId: "1:374842708619:web:5fa33d5ed837946bd53a8e",
+            measurementId: "G-0ENFGGWDPT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore(); 
+    </script>
+    <script src="./Script/main.js"></script>
+</body>
+</html>
